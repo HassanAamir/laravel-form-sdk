@@ -1,17 +1,17 @@
 {
-    "name": "ascend/efficax-builder",
-    "description": "Efficax form ",
+    "name": "hassanaamir/laravel-form-sdk",
+    "description": "Make dynamic CRUD using MongoDB",
     "keywords": [
-        "ascend",
-        "efficax-builder"
+        "hassanaamir",
+        "laravel-form-sdk"
     ],
-    "homepage": "https://github.com/ascend/efficax-builder",
+    "homepage": "https://github.com/hassanaamir/laravel-form-sdk",
     "license": "MIT",
     "type": "library",
     "authors": [
         {
-            "name": "Hassan AAmir",
-            "email": "hassan.aamir@ascend.com.sa",
+            "name": "Hassan Aamir",
+            "email": "hassan.aamir.3344@gmail.com",
             "role": "Developer"
         }
     ],
@@ -25,12 +25,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Ascend\\EfficaxBuilder\\": "src"
+            "HassanAamir\\LaravelFormSdk\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Ascend\\EfficaxBuilder\\Tests\\": "tests"
+            "HassanAamir\\LaravelFormSdk\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -44,10 +44,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Ascend\\EfficaxBuilder\\EfficaxBuilderServiceProvider"
+                "HassanAamir\\LaravelFormSdk\\LaravelFormSdkServiceProvider"
             ],
             "aliases": {
-                "EfficaxBuilder": "Ascend\\EfficaxBuilder\\EfficaxBuilderFacade"
+                "LaravelFormSdk": "HassanAamir\\LaravelFormSdk\\LaravelFormSdkFacade"
             }
         }
     }

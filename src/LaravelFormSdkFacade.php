@@ -1,13 +1,13 @@
 <?php
 
-namespace Ascend\EfficaxBuilder;
+namespace HassanAamir\LaravelFormSdk;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \Ascend\EfficaxBuilder\Skeleton\SkeletonClass
+ * @see \HassanAamir\LaravelFormSdk\Skeleton\SkeletonClass
  */
-class EfficaxBuilderFacade extends Facade
+class LaravelFormSdkFacade extends Facade
 {
     /**
      * Get the registered name of the component.
@@ -16,6 +16,6 @@ class EfficaxBuilderFacade extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'efficax-builder';
+        return 'laravel-form-sdk';
     }
 }

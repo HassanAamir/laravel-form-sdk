@@ -1,10 +1,10 @@
 <?php
 
-namespace Ascend\EfficaxBuilder;
+namespace HassanAamir\LaravelFormSdk;
 
 use Illuminate\Support\ServiceProvider;
 
-class EfficaxBuilderServiceProvider extends ServiceProvider
+class LaravelFormSdkServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap the application services.
@@ -14,29 +14,29 @@ class EfficaxBuilderServiceProvider extends ServiceProvider
         /*
          * Optional methods to load your package assets
          */
-        // $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'efficax-builder');
-        // $this->loadViewsFrom(__DIR__.'/../resources/views', 'efficax-builder');
+        // $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'laravel-form-sdk');
+        // $this->loadViewsFrom(__DIR__.'/../resources/views', 'laravel-form-sdk');
         // $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
         // $this->loadRoutesFrom(__DIR__.'/routes.php');
 
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__.'/../config/config.php' => config_path('efficax-builder.php'),
+                __DIR__.'/../config/config.php' => config_path('laravel-form-sdk.php'),
             ], 'config');
 
             // Publishing the views.
             /*$this->publishes([
-                __DIR__.'/../resources/views' => resource_path('views/vendor/efficax-builder'),
+                __DIR__.'/../resources/views' => resource_path('views/vendor/laravel-form-sdk'),
             ], 'views');*/
 
             // Publishing assets.
             /*$this->publishes([
-                __DIR__.'/../resources/assets' => public_path('vendor/efficax-builder'),
+                __DIR__.'/../resources/assets' => public_path('vendor/laravel-form-sdk'),
             ], 'assets');*/
 
             // Publishing the translation files.
             /*$this->publishes([
-                __DIR__.'/../resources/lang' => resource_path('lang/vendor/efficax-builder'),
+                __DIR__.'/../resources/lang' => resource_path('lang/vendor/laravel-form-sdk'),
             ], 'lang');*/
 
             // Registering package commands.
@@ -50,11 +50,11 @@ class EfficaxBuilderServiceProvider extends ServiceProvider
     public function register()
     {
         // Automatically apply the package configuration
-        $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'efficax-builder');
+        $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'laravel-form-sdk');
 
         // Register the main class to use with the facade
-        $this->app->singleton('efficax-builder', function () {
-            return new EfficaxBuilder;
+        $this->app->singleton('laravel-form-sdk', function () {
+            return new LaravelFormSdk;
         });
     }
 }
