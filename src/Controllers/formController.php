@@ -7,7 +7,7 @@ use App\Http\Controllers\Controller;
 use HassanAamir\LaravelFormSdk\Models\Form;
 use Illuminate\Http\Request;
 
-class formController extends Controller
+class FormController extends Controller
 {
     public function index()
     {
@@ -18,20 +18,20 @@ class formController extends Controller
     public function store(Request $request)
     {
         $form = Form::create($request->all());
-        return response()->json($forms);
+        return response()->json($form);
     }
 
     public function show($id)
     {
         $form = Form::find($id);
-        return response()->json($forms);
+        return response()->json($form);
     }
 
     public function update(Request $request, $id)
     {
         $form = Form::find($id);
         $form->update($request->all());
-        return response()->json($forms);
+        return response()->json($form);
     }
 
     public function destroy($id)
