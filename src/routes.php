@@ -3,9 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use HassanAamir\LaravelFormSdk\Controllers\formController;
 
-// Route::middleware('web')->group(function () {
-    Route::get('/form', [formController::class, 'index']);
-    Route::post('/form', [formController::class, 'store']);
-    Route::put('/form/{id}', [formController::class, 'update']);
-    Route::delete('/form/{id}', [formController::class, 'destroy']);
-// });
+Route::middleware('api')->group(function () {
+    Route::get('/your-package', [formController::class, 'index'])->name('your-package.index');
+    Route::post('/your-package', [formController::class, 'store'])->name('your-package.store');
+    Route::get('/your-package/{id}', [formController::class, 'show'])->name('your-package.show');
+    Route::put('/your-package/{id}', [formController::class, 'update'])->name('your-package.update');
+    Route::delete('/your-package/{id}', [formController::class, 'destroy'])->name('your-package.destroy');
+});
