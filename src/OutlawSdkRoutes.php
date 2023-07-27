@@ -1,16 +1,13 @@
 <?php
 
-// namespace YourVendor\YourPackage\Controllers;
-namespace HassanAamir\LaravelFormSdk\Controllers;
+namespace HassanAamir\LaravelFormSdk;
 
-use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use HassanAamir\LaravelFormSdk\Controllers\FormController;
 
-class HelperController extends Controller
+class OutlawSdkRoutes
 {
-    public function routes($middleware = [])
+    public static function routes($middleware = [])
     {
         return Route::middleware($middleware)->group(function () {
             Route::get('/outlaw-form', [FormController::class, 'index']);
